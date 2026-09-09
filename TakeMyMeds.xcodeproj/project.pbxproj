@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01C91A9B8EF774C98D7AE870 /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24693F60BDAC05F7D492A0BE /* ScheduleEngine.swift */; };
+		161101C40D4A7FC57F3C7FAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A52FD0FC3057F511C3F5A28 /* ContentView.swift */; };
+		296BF5A41E12628FA1A99DCB /* DoseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A80A1324B9EDDB8CA4E406 /* DoseCardView.swift */; };
+		37B9599DDC3F8CACBD95E91D /* BottleManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A158A5215F2CFF17657B009 /* BottleManagerView.swift */; };
+		3C3B4AAC68F4C5FD4A34345D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341D45D317CA88C8284C9309 /* SettingsView.swift */; };
+		50C53A76DB82153227DB68CD /* MedicationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0A9459299F8FA697F11A14 /* MedicationListView.swift */; };
+		544CE8FD6FAB662199AACA46 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837D1B979EDE025FA26A041 /* TodayView.swift */; };
+		5ECCB8DB019155CEAA953008 /* InjectionBottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008812C34B89F9172BA98A5 /* InjectionBottle.swift */; };
+		6873ECCCFA5B33B0A5F54812 /* DoseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92593A042C3F28AA4F6196E /* DoseLog.swift */; };
+		716FDBAB24B58000D071D69C /* MedicationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202D33A4C1D421066CA15A92 /* MedicationFormView.swift */; };
+		888A4526EAAF386CE3552986 /* AsNeededRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090166A164618D5B73A80E3F /* AsNeededRowView.swift */; };
+		9427EEDB5B1EDFAE0DA4C364 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1BF07E260112516F50ECD /* Medication.swift */; };
+		A70734991A1AC19D0C806096 /* BottleFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E470D4F6674DD80C299AF5 /* BottleFormView.swift */; };
+		C107FE7CE0B3ABC6A23DD41A /* CSVExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A89FE81A2B5C03B4D8F9 /* CSVExporter.swift */; };
+		C5708F66DC848AED8535B390 /* TakeMyMedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8412FBD47779B76C416EFF5 /* TakeMyMedsApp.swift */; };
+		CCF240184870138E86A24FE4 /* MedicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D80C6B5EEF7107F19E736 /* MedicationDetailView.swift */; };
+		DC545F3F1AD099FB0AB7E516 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C98165C851A5502FDD1667 /* HistoryView.swift */; };
+		E53FF375089A3100C8997C57 /* MedSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674CD132AD963D171AAF85F1 /* MedSchedule.swift */; };
+		ED36C4C9A4D0462AA83E5564 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5267718D36C2358E8B4A3 /* NotificationManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		090166A164618D5B73A80E3F /* AsNeededRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsNeededRowView.swift; sourceTree = "<group>"; };
+		1D91A89FE81A2B5C03B4D8F9 /* CSVExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExporter.swift; sourceTree = "<group>"; };
+		202D33A4C1D421066CA15A92 /* MedicationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationFormView.swift; sourceTree = "<group>"; };
+		24693F60BDAC05F7D492A0BE /* ScheduleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleEngine.swift; sourceTree = "<group>"; };
+		28E470D4F6674DD80C299AF5 /* BottleFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleFormView.swift; sourceTree = "<group>"; };
+		2A158A5215F2CFF17657B009 /* BottleManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleManagerView.swift; sourceTree = "<group>"; };
+		2A52FD0FC3057F511C3F5A28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		341D45D317CA88C8284C9309 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4E8D80C6B5EEF7107F19E736 /* MedicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailView.swift; sourceTree = "<group>"; };
+		65A80A1324B9EDDB8CA4E406 /* DoseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseCardView.swift; sourceTree = "<group>"; };
+		674CD132AD963D171AAF85F1 /* MedSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedSchedule.swift; sourceTree = "<group>"; };
+		7077270C0F72FEB878E2660C /* TakeMyMeds.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TakeMyMeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D1BF07E260112516F50ECD /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		A008812C34B89F9172BA98A5 /* InjectionBottle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionBottle.swift; sourceTree = "<group>"; };
+		A4C98165C851A5502FDD1667 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		C5F5267718D36C2358E8B4A3 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		C837D1B979EDE025FA26A041 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		D92593A042C3F28AA4F6196E /* DoseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseLog.swift; sourceTree = "<group>"; };
+		EA0A9459299F8FA697F11A14 /* MedicationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationListView.swift; sourceTree = "<group>"; };
+		F8412FBD47779B76C416EFF5 /* TakeMyMedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeMyMedsApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		5952F2A65A416F3A03546BB8 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				090166A164618D5B73A80E3F /* AsNeededRowView.swift */,
+				65A80A1324B9EDDB8CA4E406 /* DoseCardView.swift */,
+				C837D1B979EDE025FA26A041 /* TodayView.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		5DB39E315E01D246E204171E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A89FE81A2B5C03B4D8F9 /* CSVExporter.swift */,
+				C5F5267718D36C2358E8B4A3 /* NotificationManager.swift */,
+				24693F60BDAC05F7D492A0BE /* ScheduleEngine.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		729ABD11112C69E88BB7CD32 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				341D45D317CA88C8284C9309 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AEF99CA3584D4B60C459AB46 = {
+			isa = PBXGroup;
+			children = (
+				E0387F27BF0E9A965C691331 /* TakeMyMeds */,
+				D9198F75C4F23689CEF1AA6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7A3DA9D2A268A6881708D45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E942BC3EF12883BD46110F03 /* History */,
+				D3865910D53551D36BD4EE87 /* Medications */,
+				729ABD11112C69E88BB7CD32 /* Settings */,
+				5952F2A65A416F3A03546BB8 /* Today */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3865910D53551D36BD4EE87 /* Medications */ = {
+			isa = PBXGroup;
+			children = (
+				28E470D4F6674DD80C299AF5 /* BottleFormView.swift */,
+				2A158A5215F2CFF17657B009 /* BottleManagerView.swift */,
+				4E8D80C6B5EEF7107F19E736 /* MedicationDetailView.swift */,
+				202D33A4C1D421066CA15A92 /* MedicationFormView.swift */,
+				EA0A9459299F8FA697F11A14 /* MedicationListView.swift */,
+			);
+			path = Medications;
+			sourceTree = "<group>";
+		};
+		D9198F75C4F23689CEF1AA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7077270C0F72FEB878E2660C /* TakeMyMeds.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0387F27BF0E9A965C691331 /* TakeMyMeds */ = {
+			isa = PBXGroup;
+			children = (
+				2A52FD0FC3057F511C3F5A28 /* ContentView.swift */,
+				F8412FBD47779B76C416EFF5 /* TakeMyMedsApp.swift */,
+				EE564960E0BBABF1341EC2C5 /* Models */,
+				5DB39E315E01D246E204171E /* Utilities */,
+				C7A3DA9D2A268A6881708D45 /* Views */,
+			);
+			path = TakeMyMeds;
+			sourceTree = "<group>";
+		};
+		E942BC3EF12883BD46110F03 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A4C98165C851A5502FDD1667 /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		EE564960E0BBABF1341EC2C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D92593A042C3F28AA4F6196E /* DoseLog.swift */,
+				A008812C34B89F9172BA98A5 /* InjectionBottle.swift */,
+				94D1BF07E260112516F50ECD /* Medication.swift */,
+				674CD132AD963D171AAF85F1 /* MedSchedule.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAF6A2B17A65AD6471ECB0A1 /* TakeMyMeds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE31CF806EC68EF19BD6A817 /* Build configuration list for PBXNativeTarget "TakeMyMeds" */;
+			buildPhases = (
+				898EFE6ECC4010BF29B20B5D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TakeMyMeds;
+			packageProductDependencies = (
+			);
+			productName = TakeMyMeds;
+			productReference = 7077270C0F72FEB878E2660C /* TakeMyMeds.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D87D8FDFB2E89A074C6009CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EAF6A2B17A65AD6471ECB0A1 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = F792E6F517F7E240D5F60144 /* Build configuration list for PBXProject "TakeMyMeds" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = AEF99CA3584D4B60C459AB46;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D9198F75C4F23689CEF1AA6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAF6A2B17A65AD6471ECB0A1 /* TakeMyMeds */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		898EFE6ECC4010BF29B20B5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888A4526EAAF386CE3552986 /* AsNeededRowView.swift in Sources */,
+				A70734991A1AC19D0C806096 /* BottleFormView.swift in Sources */,
+				37B9599DDC3F8CACBD95E91D /* BottleManagerView.swift in Sources */,
+				C107FE7CE0B3ABC6A23DD41A /* CSVExporter.swift in Sources */,
+				161101C40D4A7FC57F3C7FAB /* ContentView.swift in Sources */,
+				296BF5A41E12628FA1A99DCB /* DoseCardView.swift in Sources */,
+				6873ECCCFA5B33B0A5F54812 /* DoseLog.swift in Sources */,
+				DC545F3F1AD099FB0AB7E516 /* HistoryView.swift in Sources */,
+				5ECCB8DB019155CEAA953008 /* InjectionBottle.swift in Sources */,
+				E53FF375089A3100C8997C57 /* MedSchedule.swift in Sources */,
+				9427EEDB5B1EDFAE0DA4C364 /* Medication.swift in Sources */,
+				CCF240184870138E86A24FE4 /* MedicationDetailView.swift in Sources */,
+				716FDBAB24B58000D071D69C /* MedicationFormView.swift in Sources */,
+				50C53A76DB82153227DB68CD /* MedicationListView.swift in Sources */,
+				ED36C4C9A4D0462AA83E5564 /* NotificationManager.swift in Sources */,
+				01C91A9B8EF774C98D7AE870 /* ScheduleEngine.swift in Sources */,
+				3C3B4AAC68F4C5FD4A34345D /* SettingsView.swift in Sources */,
+				C5708F66DC848AED8535B390 /* TakeMyMedsApp.swift in Sources */,
+				544CE8FD6FAB662199AACA46 /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		48A0E4D8DB72CDB4A6393887 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		82B90AA55068CFC72F9CA568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		A3CCB546BDC12EB3AC038577 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TakeMyMeds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.TakeMyMeds;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7EC47E6A82C4E4A51D61C85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TakeMyMeds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.TakeMyMeds;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE31CF806EC68EF19BD6A817 /* Build configuration list for PBXNativeTarget "TakeMyMeds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3CCB546BDC12EB3AC038577 /* Debug */,
+				B7EC47E6A82C4E4A51D61C85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F792E6F517F7E240D5F60144 /* Build configuration list for PBXProject "TakeMyMeds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82B90AA55068CFC72F9CA568 /* Debug */,
+				48A0E4D8DB72CDB4A6393887 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D87D8FDFB2E89A074C6009CD /* Project object */;
+}
