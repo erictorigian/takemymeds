@@ -6,8 +6,30 @@ struct MedicationDetailView: View {
 
     var body: some View {
         List {
+            Section {
+                HStack {
+                    Spacer()
+                    VStack(spacing: 12) {
+                        MedTypeIcon(type: medication.type, size: 64)
+                        VStack(spacing: 4) {
+                            Text(medication.name)
+                                .font(.title2.weight(.bold))
+                            Text(medication.type.rawValue)
+                                .font(.subheadline)
+                                .foregroundStyle(medication.type.color)
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 4)
+                                .background(medication.type.color.opacity(0.12), in: Capsule())
+                        }
+                    }
+                    Spacer()
+                }
+                .padding(.vertical, 12)
+                .listRowBackground(Color.clear)
+                .listRowSeparator(.hidden)
+            }
+
             Section("Details") {
-                LabeledContent("Type", value: medication.type.rawValue)
                 if !medication.dose.isEmpty {
                     LabeledContent("Dose", value: medication.dose)
                 }
@@ -31,7 +53,11 @@ struct MedicationDetailView: View {
             }
 
             Section("Stats") {
-                LabeledContent("Total Taken", value: "\(medication.totalDosesTaken)")
+                LabeledContent("Total Taken") {
+                    Text("\(medication.totalDosesTaken)")
+                        .monospacedDigit()
+                        .foregroundStyle(.primary)
+                }
                 if let last = medication.lastTakenDate {
                     LabeledContent("Last Taken", value: last.formatted(date: .abbreviated, time: .shortened))
                 }
@@ -40,22 +66,32 @@ struct MedicationDetailView: View {
             if medication.type == .injectable {
                 Section("Bottles") {
                     if let current = medication.currentBottle {
-                        NavigationLink("Manage Bottles") { BottleManagerView(medication: medication) }
-                        LabeledContent("Doses Remaining", value: "\(current.dosesRemaining) / \(current.totalDoses)")
+                        NavigationLink(destination: BottleManagerView(medication: medication)) {
+                            LabeledContent("Doses Remaining") {
+                                Text("\(current.dosesRemaining) of \(current.totalDoses)")
+                                    .monospacedDigit()
+                                    .foregroundStyle(current.dosesRemaining <= 3 ? .orange : .primary)
+                            }
+                        }
                         LabeledContent("Bottle Age", value: "\(current.ageInDays) days")
                         if current.isExpired {
-                            Label("Bottle Expired", systemImage: "exclamationmark.triangle.fill").foregroundStyle(.red)
+                            Label("Bottle Expired", systemImage: "exclamationmark.triangle.fill")
+                                .foregroundStyle(.red)
                         } else if let days = current.daysUntilExpiry, days <= 7 {
-                            Label("Expires in \(days) days", systemImage: "exclamationmark.triangle").foregroundStyle(.orange)
+                            Label("Expires in \(days) days", systemImage: "exclamationmark.triangle")
+                                .foregroundStyle(.orange)
                         }
                     } else {
-                        NavigationLink("Open New Bottle") { BottleManagerView(medication: medication) }
+                        NavigationLink(destination: BottleManagerView(medication: medication)) {
+                            Label("Open New Bottle", systemImage: "plus.circle")
+                                .foregroundStyle(medication.type.color)
+                        }
                     }
                 }
             }
         }
         .navigationTitle(medication.name)
-        .navigationBarTitleDisplayMode(.large)
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button("Edit") { showEdit = true }

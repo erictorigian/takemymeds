@@ -15,17 +15,29 @@ struct TodayView: View {
         medications.filter { $0.schedule?.frequency == .asNeeded }
     }
 
+    private var takenCount: Int { scheduledDoses.filter(\.isTaken).count }
+    private var overdueCount: Int { scheduledDoses.filter(\.isOverdue).count }
+
     var body: some View {
         NavigationStack {
             List {
                 if !scheduledDoses.isEmpty {
-                    Section("Scheduled") {
+                    Section {
                         ForEach(scheduledDoses) { dose in
                             DoseCardView(dose: dose) {
                                 markTaken(dose: dose)
                             } onSkip: {
                                 skip(dose: dose)
                             }
+                        }
+                    } header: {
+                        HStack {
+                            Text("Scheduled")
+                            Spacer()
+                            Text("\(takenCount) of \(scheduledDoses.count) taken")
+                                .foregroundStyle(overdueCount > 0 ? .red : .secondary)
+                                .monospacedDigit()
+                                .textCase(nil)
                         }
                     }
                 }
@@ -39,7 +51,12 @@ struct TodayView: View {
                 }
 
                 if scheduledDoses.isEmpty && asNeededMeds.isEmpty {
-                    ContentUnavailableView("No Medications Today", systemImage: "checkmark.circle", description: Text("Add medications in the Medications tab."))
+                    ContentUnavailableView(
+                        "No Medications Today",
+                        systemImage: "checkmark.circle",
+                        description: Text("Add medications in the Medications tab.")
+                    )
+                    .listRowBackground(Color.clear)
                 }
             }
             .navigationTitle(todayTitle)
@@ -52,9 +69,7 @@ struct TodayView: View {
     }
 
     private var todayTitle: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE, MMM d"
-        return formatter.string(from: Date())
+        Date().formatted(.dateTime.weekday(.wide).month().day())
     }
 
     private func markTaken(dose: ScheduledDose) {

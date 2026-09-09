@@ -6,25 +6,35 @@ struct AsNeededRowView: View {
     @State private var showSheet = false
 
     var body: some View {
-        HStack {
-            Image(systemName: medication.type.systemImage)
-                .foregroundStyle(medication.type.color)
-            VStack(alignment: .leading) {
-                Text(medication.name).font(.headline)
+        HStack(spacing: 14) {
+            MedTypeIcon(type: medication.type, size: 38)
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(medication.name)
+                    .font(.body.weight(.semibold))
                 if !medication.dose.isEmpty {
-                    Text(medication.dose).font(.caption).foregroundStyle(.secondary)
+                    Text(medication.dose)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                 }
                 if let last = medication.lastTakenDate {
-                    Text("Last taken: \(last.formatted(date: .abbreviated, time: .shortened))")
-                        .font(.caption2).foregroundStyle(.tertiary)
+                    Text("Last: \(last.formatted(date: .abbreviated, time: .shortened))")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .monospacedDigit()
                 }
             }
+
             Spacer()
-            Button { showSheet = true } label: {
+
+            Button {
+                showSheet = true
+            } label: {
                 Image(systemName: "plus.circle.fill")
-                    .font(.title2)
                     .foregroundStyle(medication.type.color)
+                    .font(.title2)
             }
+            .buttonStyle(.plain)
         }
         .sheet(isPresented: $showSheet) {
             QuickLogSheet(medication: medication)
@@ -50,7 +60,7 @@ struct QuickLogSheet: View {
                         .lineLimit(3...6)
                 }
             }
-            .navigationTitle("Log \(medication.name)")
+            .navigationTitle(medication.name)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }

@@ -16,6 +16,7 @@
 		544CE8FD6FAB662199AACA46 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837D1B979EDE025FA26A041 /* TodayView.swift */; };
 		5ECCB8DB019155CEAA953008 /* InjectionBottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008812C34B89F9172BA98A5 /* InjectionBottle.swift */; };
 		6873ECCCFA5B33B0A5F54812 /* DoseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92593A042C3F28AA4F6196E /* DoseLog.swift */; };
+		6E4BAA22B02B7AAB18AAD9A3 /* MedTypeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7030D6D21A0C976BC2FBF34 /* MedTypeIcon.swift */; };
 		716FDBAB24B58000D071D69C /* MedicationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202D33A4C1D421066CA15A92 /* MedicationFormView.swift */; };
 		888A4526EAAF386CE3552986 /* AsNeededRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090166A164618D5B73A80E3F /* AsNeededRowView.swift */; };
 		9427EEDB5B1EDFAE0DA4C364 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1BF07E260112516F50ECD /* Medication.swift */; };
@@ -47,6 +48,7 @@
 		C5F5267718D36C2358E8B4A3 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		C837D1B979EDE025FA26A041 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		D92593A042C3F28AA4F6196E /* DoseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseLog.swift; sourceTree = "<group>"; };
+		E7030D6D21A0C976BC2FBF34 /* MedTypeIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTypeIcon.swift; sourceTree = "<group>"; };
 		EA0A9459299F8FA697F11A14 /* MedicationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationListView.swift; sourceTree = "<group>"; };
 		F8412FBD47779B76C416EFF5 /* TakeMyMedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeMyMedsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		77E51659FE0821C937968ECB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E7030D6D21A0C976BC2FBF34 /* MedTypeIcon.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		AEF99CA3584D4B60C459AB46 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		C7A3DA9D2A268A6881708D45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				77E51659FE0821C937968ECB /* Components */,
 				E942BC3EF12883BD46110F03 /* History */,
 				D3865910D53551D36BD4EE87 /* Medications */,
 				729ABD11112C69E88BB7CD32 /* Settings */,
@@ -218,6 +229,7 @@
 				DC545F3F1AD099FB0AB7E516 /* HistoryView.swift in Sources */,
 				5ECCB8DB019155CEAA953008 /* InjectionBottle.swift in Sources */,
 				E53FF375089A3100C8997C57 /* MedSchedule.swift in Sources */,
+				6E4BAA22B02B7AAB18AAD9A3 /* MedTypeIcon.swift in Sources */,
 				9427EEDB5B1EDFAE0DA4C364 /* Medication.swift in Sources */,
 				CCF240184870138E86A24FE4 /* MedicationDetailView.swift in Sources */,
 				716FDBAB24B58000D071D69C /* MedicationFormView.swift in Sources */,

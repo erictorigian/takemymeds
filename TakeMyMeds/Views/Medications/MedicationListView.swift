@@ -3,7 +3,6 @@ import SwiftData
 
 struct MedicationListView: View {
     @Query(filter: #Predicate<Medication> { $0.active }, sort: \Medication.name) private var medications: [Medication]
-    @Environment(\.modelContext) private var context
     @State private var showAdd = false
 
     private var grouped: [(MedicationType, [Medication])] {
@@ -15,42 +14,76 @@ struct MedicationListView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(grouped, id: \.0) { type, meds in
-                    Section {
-                        ForEach(meds) { med in
-                            NavigationLink(destination: MedicationDetailView(medication: med)) {
-                                HStack {
-                                    Image(systemName: type.systemImage).foregroundStyle(type.color)
-                                    VStack(alignment: .leading) {
-                                        Text(med.name).font(.headline)
-                                        if !med.dose.isEmpty {
-                                            Text(med.dose).font(.caption).foregroundStyle(.secondary)
-                                        }
-                                        if let schedule = med.schedule {
-                                            Text(schedule.frequency.rawValue).font(.caption2).foregroundStyle(.tertiary)
-                                        }
+            Group {
+                if medications.isEmpty {
+                    ContentUnavailableView(
+                        "No Medications",
+                        systemImage: "pill.circle",
+                        description: Text("Tap + to add your first medication.")
+                    )
+                } else {
+                    List {
+                        ForEach(grouped, id: \.0) { type, meds in
+                            Section {
+                                ForEach(meds) { med in
+                                    NavigationLink(destination: MedicationDetailView(medication: med)) {
+                                        MedRow(medication: med)
+                                    }
+                                    .swipeActions(edge: .trailing) {
+                                        Button("Archive", role: .destructive) { med.active = false }
+                                            .tint(.red)
                                     }
                                 }
-                            }
-                            .swipeActions(edge: .trailing) {
-                                Button("Archive", role: .destructive) { med.active = false }
+                            } header: {
+                                Label(type.rawValue, systemImage: type.systemImage)
+                                    .foregroundStyle(type.color)
                             }
                         }
-                    } header: {
-                        Label(type.rawValue, systemImage: type.systemImage).foregroundStyle(type.color)
                     }
                 }
             }
             .navigationTitle("Medications")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button { showAdd = true } label: { Image(systemName: "plus") }
+                    Button {
+                        showAdd = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
             }
             .sheet(isPresented: $showAdd) {
                 MedicationFormView()
             }
         }
+    }
+}
+
+private struct MedRow: View {
+    let medication: Medication
+
+    var body: some View {
+        HStack(spacing: 14) {
+            MedTypeIcon(type: medication.type, size: 38)
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(medication.name)
+                    .font(.body.weight(.semibold))
+                    .foregroundStyle(.primary)
+
+                Group {
+                    if !medication.dose.isEmpty, let schedule = medication.schedule {
+                        Text("\(medication.dose) · \(schedule.frequency.rawValue)")
+                    } else if !medication.dose.isEmpty {
+                        Text(medication.dose)
+                    } else if let schedule = medication.schedule {
+                        Text(schedule.frequency.rawValue)
+                    }
+                }
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 2)
     }
 }
