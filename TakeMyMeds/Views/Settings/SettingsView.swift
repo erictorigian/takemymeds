@@ -15,7 +15,7 @@ struct SettingsView: View {
             List {
                 Section("Notifications") {
                     Button("Reschedule Notifications") {
-                        Task { await NotificationManager.shared.scheduleNotifications(for: medications) }
+                        Task { await NotificationManager.shared.scheduleAll(for: medications) }
                     }
                 }
 

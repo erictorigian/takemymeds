@@ -38,6 +38,7 @@
 		2A158A5215F2CFF17657B009 /* BottleManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleManagerView.swift; sourceTree = "<group>"; };
 		2A52FD0FC3057F511C3F5A28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		341D45D317CA88C8284C9309 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3A5F16D8B33DD7DF2EE825AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4E8D80C6B5EEF7107F19E736 /* MedicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailView.swift; sourceTree = "<group>"; };
 		65A80A1324B9EDDB8CA4E406 /* DoseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseCardView.swift; sourceTree = "<group>"; };
 		674CD132AD963D171AAF85F1 /* MedSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedSchedule.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2A52FD0FC3057F511C3F5A28 /* ContentView.swift */,
+				3A5F16D8B33DD7DF2EE825AA /* Info.plist */,
 				F8412FBD47779B76C416EFF5 /* TakeMyMedsApp.swift */,
 				EE564960E0BBABF1341EC2C5 /* Models */,
 				5DB39E315E01D246E204171E /* Utilities */,
@@ -188,7 +190,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					EAF6A2B17A65AD6471ECB0A1 = {
 						DevelopmentTeam = "";
@@ -372,13 +374,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TakeMyMeds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.TakeMyMeds;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -388,13 +392,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TakeMyMeds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.TakeMyMeds;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

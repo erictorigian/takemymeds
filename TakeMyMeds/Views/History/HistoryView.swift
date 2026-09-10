@@ -83,13 +83,13 @@ struct LogRow: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(log.medication?.name ?? "Unknown")
                     .font(.body.weight(.semibold))
-                if let bottleLot = log.bottle?.lotNumber {
+                if let bottle = log.bottle, let bottleLot = bottle.lotNumber {
                     Text("Lot \(bottleLot)")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
-                if let notes = log.notes, !notes.isEmpty {
-                    Text(notes)
+                if !log.notes.isEmpty {
+                    Text(log.notes)
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .italic()

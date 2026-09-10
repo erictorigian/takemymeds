@@ -3,19 +3,19 @@ import SwiftData
 
 @Model final class InjectionBottle {
     var id: UUID = UUID()
-    var openedAt: Date = Date()
+    var openedAt: Date? = nil
     var closedAt: Date? = nil
     var totalDoses: Int = 1
-    var lotNumber: String = ""
+    var lotNumber: String? = nil
     var expiresAt: Date? = nil
     var maxOpenDays: Int? = nil
     var isCurrent: Bool = true
-    var notes: String = ""
+    var notes: String? = nil
 
     @Relationship var medication: Medication?
     @Relationship(deleteRule: .nullify) var doseLogs: [DoseLog] = []
 
-    init(medication: Medication, openedAt: Date = Date(), totalDoses: Int = 1, lotNumber: String = "", expiresAt: Date? = nil, maxOpenDays: Int? = nil, notes: String = "") {
+    init(medication: Medication, openedAt: Date? = Date(), totalDoses: Int = 1, lotNumber: String? = nil, expiresAt: Date? = nil, maxOpenDays: Int? = nil, notes: String? = nil) {
         self.medication = medication
         self.openedAt = openedAt
         self.totalDoses = totalDoses
@@ -29,8 +29,9 @@ import SwiftData
     var dosesRemaining: Int { max(0, totalDoses - dosesTaken) }
 
     var ageInDays: Int {
+        guard let opened = openedAt else { return 0 }
         let end = closedAt ?? Date()
-        return Calendar.current.dateComponents([.day], from: openedAt, to: end).day ?? 0
+        return Calendar.current.dateComponents([.day], from: opened, to: end).day ?? 0
     }
 
     var isExpiredByDate: Bool { expiresAt.map { Date() > $0 } ?? false }

@@ -3,7 +3,6 @@ options:
   bundleIdPrefix: com.eric
   deploymentTarget:
     iOS: "17.0"
-  xcodeVersion: "15.0"
 
 settings:
   base:
@@ -15,19 +14,28 @@ targets:
   TakeMyMeds:
     type: application
     platform: iOS
+    deploymentTarget: "17.0"
     sources:
       - path: TakeMyMeds
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.eric.TakeMyMeds
         INFOPLIST_FILE: TakeMyMeds/Info.plist
-        TARGETED_DEVICE_FAMILY: "1"
-    plist:
-      path: TakeMyMeds/Info.plist
-      properties:
-        CFBundleName: $(PRODUCT_NAME)
-        CFBundleDisplayName: TakeMyMeds
-        CFBundleVersion: "1"
-        CFBundleShortVersionString: "1.0"
-        UILaunchScreen: {}
-        UIApplicationSupportsIndirectInputEvents: true
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: "NO"
+
+schemes:
+  TakeMyMeds:
+    build:
+      targets:
+        TakeMyMeds: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
